@@ -1,0 +1,137 @@
+/* -FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+-------06 SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.main-container {
+  max-width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ******* HEADING STYLING ******* */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 12px;
+
+  text-align: center;
+}
+
+.secondary-header,
+.tertiary-header {
+  color: hsl(234, 12%, 34%);
+}
+
+.main-header,
+p {
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+}
+
+/* ******** CARD LAYOUT ******** */
+.section-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px 32px;
+}
+
+.supervisor-card {
+  grid-row: span 2;
+}
+.karma-card {
+  grid-column: 2;
+  grid-row: 2;
+}
+.calculator-card {
+  grid-column: 3;
+  grid-row: span 2;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  padding: 12px 24px;
+  box-shadow: 0.5px 0.5px 12px 1px hsl(234, 12%, 34%);
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* ***** CARDS  STYLING ******/
+.supervisor-card {
+  border-top: 4px solid hsl(180, 62%, 55%);
+  align-self: center;
+}
+
+.team-builder-card {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+.karma-card {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+.calculator-card {
+  border-top: 4px solid hsl(212, 86%, 64%);
+  align-self: center;
+}
+
+.para-card {
+  font-size: 15px;
+}
+.logo {
+  align-self: flex-end;
+  margin-top: 12px;
+  width: 64px;
+}
+
+/* *********** MEDIA QUERIES *************/
+
+@media (max-width: 965px) {
+  .main-container {
+    max-width: 95%;
+  }
+  .section-cards {
+    gap: 16px 16px;
+  }
+}
+
+@media (max-width: 675px) {
+  .main-container {
+    max-width: 80%;
+  }
+  .section-cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 675px) {
+  .main-container {
+    max-width: 80%;
+  }
+  .section-cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 375px) {
+  .section-cards {
+    gap: 32px 32px;
+  }
+} ;
